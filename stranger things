@@ -1,0 +1,18 @@
+# Welcome to Sonic Pi v2.11.1
+use_bpm 160
+
+play :c2
+sleep 0.5
+play :e2
+sleep 0.5
+play :g2
+sleep 0.5
+play :b2
+
+play :c3
+sleep 0.5
+play :b2
+sleep 0.5
+play :g2
+sleep 0.5
+play :e2
