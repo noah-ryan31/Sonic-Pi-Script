@@ -1,18 +1,19 @@
-x=35
-8.times do
-  play x
-  sleep 1
-  x=(x+4)
-end
+use_synth :piano
 live_loop :drums do
+  play :g3
+  sleep 1.1
+  play :f1
+  sleep 0.5
+  play :a2
+  sleep 0.5
+  play :g1
   puts "slow drums"
   5.times do
     sample :drum_bass_soft
-    sleep 0.5
+    
   end
 end
 live_loop :snare, delay: 3.5 do
   sample :drum_snare_soft
   sleep 1
 end
-x=60
