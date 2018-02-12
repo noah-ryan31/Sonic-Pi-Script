@@ -1,0 +1,18 @@
+x=35
+8.times do
+  play x
+  sleep 1
+  x=(x+4)
+end
+live_loop :drums do
+  puts "slow drums"
+  5.times do
+    sample :drum_bass_soft
+    sleep 0.5
+  end
+end
+live_loop :snare, delay: 3.5 do
+  sample :drum_snare_soft
+  sleep 1
+end
+x=60
