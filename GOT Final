@@ -1,0 +1,27 @@
+#Game of Thrones Intro
+use_bpm 160
+use_synth :piano
+got_notes = [:g4, :c4, :Eb4, :f4]
+got_sleeps = [1, 1, 0.5, 0.5]
+GOTY = "C:/Users/noah_ryan/Music/GOTY.wav"
+#This array is playing the notes above along with the sleeps
+live_loop :GOT do
+  x=0
+  4.times do
+    play got_notes [x]
+    sleep got_sleeps [x]
+    x= x+1
+  end
+end
+#this randomizes the tune of this song between 50-95
+i = rrand(50, 95)
+live_loop:base do
+  play i
+  print i
+  sleep 0.5
+end
+
+live_loop:sample do
+  sample GOTY,amp:7
+  sleep 60
+end
