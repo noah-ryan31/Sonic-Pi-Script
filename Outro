@@ -1,0 +1,9 @@
+use_bpm 100
+got_notes = [:g4, :c4, :Eb4, :f4,:g4, :c4, :Eb4, :f4,:g4, :c4, :Eb4, :f4,:g4, :c4, :Eb4, :f4,]
+got_sleeps = [1, 1, 0.5, 0.5,1, 1, 0.5, 0.5,1, 1, 0.5, 0.5,1, 1, 0.5, 0.5,]
+x=0
+12.times do
+  play got_notes [x]
+  sleep got_sleeps [x]
+  x= x+1
+end
